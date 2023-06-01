@@ -1,0 +1,70 @@
+@keyframes changeFontColor {
+  0% {
+    color: crimson;
+  }
+  25% {
+    color: gold;
+  }
+  50% {
+    color: crimson;
+  }
+  75% {
+    color: gold;
+  }
+  100% {
+    color: crimson;
+  }
+}
+.pokedex__container {
+  width: 90%;
+  border-radius: 15px;
+
+  padding-top: 16%;
+
+  box-shadow: 0 0 100px 1px crimson;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pokedex__container p {
+  width: 100%;
+
+  font-size: 2.8em;
+  line-height: 1em;
+  text-align: center;
+
+  padding: 10px;
+}
+.pokedex__container p span {
+  color: crimson;
+
+  transition: 0.25s;
+  animation: changeFontColor 5s infinite;
+}
+.pokemon__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+}
+@media (max-width: 900px) {
+  .pokedex__container {
+    padding-top: 20%;
+  }
+  .pokedex__container p {
+    font-size: 3em;
+  }
+}
+@media (max-width: 430px) {
+  .pokedex__container {
+    box-shadow: 0 0 40px 1px crimson;
+
+    padding-top: 22%;
+  }
+  .pokedex__container p {
+    font-size: 2.5em;
+  }
+}

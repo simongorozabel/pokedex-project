@@ -1,0 +1,40 @@
+.pagination__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1px;
+
+  padding: 2em 0;
+}
+.pagination__container button {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  border: transparent;
+  margin: 1px 0;
+
+  cursor: pointer;
+  transition: 0.25s;
+
+  background: radial-gradient(whitesmoke, silver);
+}
+.pagination__container button:first-child,
+.pagination__container button:last-child {
+  width: 80px;
+  height: 35px;
+
+  border-radius: 25px;
+  border: 1px solid silver;
+}
+.pagination__container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 1px 1px black;
+}
+.pagination__container button:first-child:hover {
+  box-shadow: -1px 0 4px 1px black;
+}
+.pagination__container button:last-child:hover {
+  box-shadow: 1px 0 4px 1px;
+}

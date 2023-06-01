@@ -1,0 +1,90 @@
+.filter__form__container {
+  width: 80vw;
+  max-width: 500px;
+  height: 220px;
+
+  background: transparent;
+
+  border-radius: 5px;
+  margin: 25px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.filter__form__container h2 {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+.filter__form__container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 95%;
+  max-width: 400px;
+}
+.filter__form__container div h2 {
+  font-size: 1em;
+  font-weight: 100;
+}
+.filter__form__container div input {
+  width: 100%;
+  height: 50px;
+  border: solid 1px silver;
+  border-radius: 10px;
+
+  text-align: center;
+  font-size: 1em;
+}
+.filter__form__container div select {
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.9em;
+
+  width: 150px;
+  height: 30px;
+
+  border-radius: 10px;
+  border: 2px solid crimson;
+
+  background-color: black;
+  color: crimson;
+
+  transition: 0.25s;
+
+  cursor: pointer;
+}
+.filter__form__container div select:hover {
+  background-color: whitesmoke;
+}
+.filter__form__container div select option {
+  background-color: whitesmoke;
+}
+.filter__form__container button {
+  width: 300px;
+  height: 40px;
+
+  border-radius: 25px;
+  border: 2px solid crimson;
+
+  font-size: 1.5em;
+  font-weight: 900;
+
+  background-color: black;
+  color: silver;
+
+  transition: 0.25s;
+}
+.filter__form__container button:hover {
+  cursor: pointer;
+
+  color: black;
+  background-color: silver;
+
+  border: solid 3px black;
+}
