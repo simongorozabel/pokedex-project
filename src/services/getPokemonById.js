@@ -20,6 +20,12 @@ export const getPokemonById = async (id) => {
 
     const pokemonData = res.data;
 
+    const response = await axiosInstance.get(`pokemon-species/${id}`);
+
+    const colorData = response.data.color.name
+      ? response.data.color.name
+      : "black";
+
     const adaptedPokemon = {
       name: pokemonData.name[0].toUpperCase() + pokemonData.name.slice(1),
       types: pokemonData.types.map((typeInfo) => typeInfo.type.name),
@@ -28,7 +34,18 @@ export const getPokemonById = async (id) => {
         value: statsInfo.base_stat,
       })),
       image: getPokemonImg(pokemonData.sprites),
+      abilities:
+        pokemonData.abilities.length > 0
+          ? pokemonData.abilities.map(
+              (ability) =>
+                ability.ability.name[0].toUpperCase() +
+                ability.ability.name.slice(1)
+            )
+          : "unknown",
+      color: colorData,
     };
+
+    console.log(adaptedPokemon);
 
     return adaptedPokemon;
   } catch (error) {

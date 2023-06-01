@@ -1,18 +1,112 @@
 .pokemon__details__container {
   background-color: silver;
 
-  padding: 100px 10px;
-
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pokemon__details__container .pokemon__image__container {
+  padding-top: 120px;
+
+  min-width: 100%;
+
+  min-height: 50vh;
+  max-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon__details__container .pokemon__image__container img {
+  min-width: 320px;
+  min-height: 320px;
+}
+.pokemon__details__container .pokemon__details__name {
+  min-width: 50vw;
+}
+.pokemon__details__container .pokemon__details__name h2 {
+  font-size: 2em;
+  text-align: center;
+}
+.pokemon_type-and-ability {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.pokemon__details__container .pokemon__details__type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+
+  font-size: 1em;
+}
+.pokemon__details__container .pokemon__details__type h3 {
+  z-index: 100;
+}
+.pokemon__details__container .pokemon__details__type h4 {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+
+  font-weight: 100;
+}
+.pokemon__details__container .pokemon__details__type h4 span {
+  background-color: whitesmoke;
+  color: black;
+
+  min-width: 150px;
+  max-width: 400px;
+
+  min-height: 2em;
+
+  border-radius: 5px;
+
+  font-size: 1.3em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pokemon__stats__detail h4 span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+
+  padding: 0.3em 0;
+}
+.pokemon__stats__detail h4 span b {
+  font-weight: 900;
 }
 @media (min-width: 460px) and (max-width: 900px) {
-  .pokemon__details__container {
-    padding: 150px 0;
+  .pokemon__details__container .pokemon__image__container {
+    padding-top: 180px;
+  }
+  .pokemon__details__container .pokemon__image__container img {
+    min-width: 400px;
+    min-height: 400px;
+  }
+  .pokemon__details__container .pokemon__details__name h2 {
+    font-size: 2.3em;
   }
 }
 @media (min-width: 1300px) {
-  .pokemon__details__container {
-    padding: 180px 0;
+  .pokemon__details__container .pokemon__image__container {
+    padding-top: 200px;
+  }
+  .pokemon__details__container .pokemon__image__container img {
+    min-width: 400px;
+    min-height: 400px;
+  }
+  .pokemon__details__container.pokemon__details__name h2 {
+    font-size: 2.5em;
   }
 }

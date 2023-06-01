@@ -2,7 +2,7 @@ import "./Login.css";
 
 import { useState, useRef, useContext } from "react";
 
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { UserNameContext } from "../../context/UserNameContext";
 
@@ -13,10 +13,6 @@ const Login = ({ onSendName }) => {
 
   const navigate = useNavigate();
   const { saveUserName } = useContext(UserNameContext);
-
-  const location = useLocation();
-
-  const { removeUserName } = useContext(UserNameContext);
 
   const handleChange = (e) => {
     const nameValue = e.target.value;
@@ -47,7 +43,7 @@ const Login = ({ onSendName }) => {
 
   const handleSendName = (userNameValue) => {
     saveUserName(userNameValue);
-    navigate(location.state.from);
+    navigate("/pokedex");
   };
 
   return (

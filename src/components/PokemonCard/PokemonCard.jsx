@@ -16,7 +16,7 @@ const PokemonCard = ({ pokemonId }) => {
       setPokemon(pokemonData);
     };
     loadPokemon();
-  }, []);
+  }, [pokemonId]);
 
   return (
     <article className="pokemon__card">
