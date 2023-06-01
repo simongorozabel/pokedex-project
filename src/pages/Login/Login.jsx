@@ -1,15 +1,22 @@
 import "./Login.css";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 
-import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import { UserNameContext } from "../../context/UserNameContext";
 
 const Login = ({ onSendName }) => {
   const [userNameValue, setUserNameValue] = useState("");
   const [nameError, setNameError] = useState("");
   const hasInputAlreadyTouched = useRef(false);
+
+  const navigate = useNavigate();
+  const { saveUserName } = useContext(UserNameContext);
+
+  const location = useLocation();
+
+  const { removeUserName } = useContext(UserNameContext);
 
   const handleChange = (e) => {
     const nameValue = e.target.value;
@@ -38,12 +45,9 @@ const Login = ({ onSendName }) => {
     }
   };
 
-  const navigate = useNavigate();
-  const { saveUserName } = useContext(UserNameContext);
-
   const handleSendName = (userNameValue) => {
     saveUserName(userNameValue);
-    navigate("/pokedex");
+    navigate(location.state.from);
   };
 
   return (

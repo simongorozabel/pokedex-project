@@ -79,10 +79,10 @@
   color: silver;
 
   transition: 0.25s;
+
+  cursor: pointer;
 }
 .filter__form__container button:hover {
-  cursor: pointer;
-
   color: black;
   background-color: silver;
 

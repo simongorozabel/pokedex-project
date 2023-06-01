@@ -29,6 +29,11 @@
 .pokemon__card h3 {
   font-size: 2em;
   line-height: 1.5em;
+
+  background: -webkit-linear-gradient(silver, gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .pokemon__card h4 {
   display: flex;
