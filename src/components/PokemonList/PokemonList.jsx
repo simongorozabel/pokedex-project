@@ -26,7 +26,7 @@ const PokemonList = ({ pokemons }) => {
             to={`/pokedex/${pokemon.url.split("/").at(-2)}`}
             key={pokemon.url}
           >
-            <PokemonCard pokemonId={pokemon.url.split("/").at(-2)} />
+            <PokemonCard pokemonId={pokemon?.url.split("/").at(-2)} />
           </Link>
         ))}
       </div>

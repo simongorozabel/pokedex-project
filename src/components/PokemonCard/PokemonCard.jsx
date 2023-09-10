@@ -18,6 +18,10 @@ const PokemonCard = ({ pokemonId }) => {
     loadPokemon();
   }, [pokemonId]);
 
+  if (!pokemon) {
+    return;
+  }
+
   return (
     <article className="pokemon__card">
       {!pokemon && <p>Loading...</p>}
